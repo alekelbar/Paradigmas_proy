@@ -19,6 +19,7 @@
 
   include_once "Navbar.php";
   include "../Models/Spreadsheet/BasicSpreadsheetFactory.php";
+  include "../Models/taxes/TaxCalculator.php";
 
   $spreadsheetFactory = new BasicSpreadsheetFactory();
   $spreadsheet = $spreadsheetFactory->createSpreadsheet();
@@ -44,11 +45,11 @@
       <table class="table table-responsive table-dark">
         <thead>
           <th class="text-center" scope="row">#</th>
-          <th class="text-center" scope="row">Empleado</th>
-          <th class="text-center" scope="row">Salario Bruto</th>
-          <th class="text-center" scope="row">Salario Neto</th>
-          <th class="text-center" scope="row">Rebaja Laboral</th>
-          <th class="text-center" scope="row">Horas Extra</th>
+          <th class="text-center" scope="row">Employee</th>
+          <th class="text-center" scope="row">Grass Salary</th>
+          <th class="text-center" scope="row">Net Salary</th>
+          <th class="text-center" scope="row">wage reduction</th>
+          <th class="text-center" scope="row">Over Time</th>
           <th class="text-center" scope="row">Date</th>
           <th class="text-center" scope="row">Manage</th>
         </thead>
@@ -66,13 +67,13 @@
               ' <th class="text-center" scope="row">' . $index . '</th>' .
               ' <td class="text-center fw-bold">' . $spreadsheet->getEmployee($item['employee_id'])['f_name'] . '</td>' .
               ' <td class="text-center">' . $item['sal_bruto'] . ' $' . '</td>' .
-              ' <td class="text-center">' . $item['sal_neto'] . ' $' . '</td>' .
-              ' <td class="text-center">' . $item['sal_bruto'] - $item['sal_neto'] . ' $' . '</td>' .
+              ' <td class="text-center">' . round(TaxCalculator::cal($item['sal_bruto']), 2) . ' $' . '</td>' .
+              ' <td class="text-center">' . round($item['sal_bruto'] - TaxCalculator::cal($item['sal_bruto']), 2) . ' $' . '</td>' .
               ' <td class="text-center">' . $item['extra'] . '</td>' .
               ' <td class="text-center">' . $item['date'] . '</td>' .
               ' <td class="text-center">' .
               '
-              <a href="Views\EditSpr.php?action=edit&data=' . $item['id'] . '" class="btn btn-success mx-2">
+              <a href="http://localhost/proy_paradigmas/Views/EditSpr.php?action=edit&data=' . $item['id'] . '" class="btn btn-success mx-2">
                 <i class="fa-solid fa-pen-to-square"></i>
               </a>' .
 
@@ -84,8 +85,8 @@
               '</tr>';
 
             $bruto +=  $item['sal_bruto'];
-            $neto += $item['sal_neto'];
-            $reb_lab += $item['sal_bruto'] - $item['sal_neto'];
+            $neto += round(TaxCalculator::cal($item['sal_bruto']), 2);
+            $reb_lab += round($item['sal_bruto'] - TaxCalculator::cal($item['sal_bruto']), 2);
             $extra += $item['extra'];
             $index++;
           }

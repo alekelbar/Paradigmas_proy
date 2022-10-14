@@ -72,7 +72,7 @@
         <div id="email" class="form-text">We need to contact to you.</div>
 
         <label for="InputPhone" class="fw-semibold form-label my-3">What's your phone number?</label>
-        <input name="Iphone" type="number" class="form-control" id="InputPhone" aria-describedby="phone" required>
+        <input name="Iphone" min="0" type="number" class="form-control" id="InputPhone" aria-describedby="phone" required>
         <div id="phone" class="form-text">We need to contact to you.</div>
 
         <label for="InputDate" class="fw-semibold form-label my-3">What's your hire date?</label>
@@ -80,7 +80,7 @@
         <div id="date" class="form-text">it's important to now.</div>
 
         <label for="InputJob" class="fw-semibold form-label my-3">What's your Job?</label>
-        <select id="InputJob" class=" form-select" name="Ijob">
+        <select required id="InputJob" class=" form-select" name="Ijob">
           <?php
           if ($jobs->rowCount() > 0) {
             foreach ($jobs as $job) {
@@ -93,7 +93,7 @@
 
 
         <label for="InputState" class="fw-semibold form-label my-3">What's your state?</label>
-        <select id="InputState" class=" form-select" name="Istate">
+        <select require id="InputState" class=" form-select" name="Istate">
           <?php
 
           if ($states->rowCount() > 0) {
@@ -107,7 +107,7 @@
         <div id="state" class="form-text">What's your job?</div>
 
         <label for="InputDept" class="fw-semibold form-label my-3">What's your department?</label>
-        <select id="InputDept" class=" form-select" name="Idept">
+        <select require id="InputDept" class=" form-select" name="Idept">
           <?php
 
           if ($depts->rowCount() > 0) {

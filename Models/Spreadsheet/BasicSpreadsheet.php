@@ -7,10 +7,10 @@ class BasicSpreadsheet extends Spreadsheet
 {
 
   // Datos de la entidad...
-  private string $id;
+  private int $id;
   private float $salarioB;
-  private float $salarioN;
-  private float $extra;
+  private int $extra;
+  private string $date;
   private int $employee;
 
   public function __construct()
@@ -21,16 +21,16 @@ class BasicSpreadsheet extends Spreadsheet
   }
 
   public function setData(
-    string $id,
+    int $id,
     float $salarioB,
-    float $salarioN,
-    float $extra,
+    int $extra,
+    string $date,
     int $employee,
   ) {
     $this->id = $id;
     $this->salarioB = $salarioB;
-    $this->salarioN = $salarioN;
     $this->extra = $extra;
+    $this->date = $date;
     $this->employee = $employee;
   }
 
@@ -57,9 +57,37 @@ class BasicSpreadsheet extends Spreadsheet
 
   public function update()
   {
+    $stm = $this->connection->prepare("UPDATE spreadsheet SET employee_id = :em, sal_bruto = :sb, extra = :ex, date = :da where id = :id");
+    return $stm->execute([
+      "id" => $this->id,
+      "em" => $this->employee,
+      "sb" => $this->salarioB,
+      "ex" => $this->extra,
+      "da" => $this->date
+    ]);
   }
 
   public function save()
   {
+    var_dump(
+      $this->employee,
+      $this->salarioB,
+      $this->salarioN,
+      $this->extra,
+      $this->date
+    );
+
+    $stm = $this->connection->prepare("INSERT INTO spreadsheet(employee_id, sal_bruto, extra, date) VALUES (:em, :sb, :ex, :da)");
+    return $stm->execute([
+      "em" => $this->employee,
+      "sb" => $this->salarioB,
+      "ex" => $this->extra,
+      "da" => $this->date
+    ]);
+  }
+
+  public function getOne($id)
+  {
+    return $this->connection->query("SELECT * FROM spreadsheet WHERE id = $id")->fetch(PDO::FETCH_ASSOC);
   }
 }

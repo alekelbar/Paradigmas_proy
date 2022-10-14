@@ -9,10 +9,10 @@ echo '
       </button>
       <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div class="navbar-nav">
-          <a class="text-white nav-link" aria-current="page" href="http://localhost/proy_paradigmas/Views/add.php">Add employee</a>
+        <a class="text-white nav-link" href="http://localhost/proy_paradigmas/Views/Spreadsheet.php">Spreadsheet</a>
+        <a class="text-white nav-link" aria-current="page" href="http://localhost/proy_paradigmas/Views/add.php">Add employee</a>
           <a class="text-white nav-link" aria-current="page" href="http://localhost/proy_paradigmas/Views/addSpr.php">Add spreadsheet</a>
-          <a class="text-white nav-link" href="http://localhost/proy_paradigmas/Views/Spreadsheet.php">Spreadsheet</a>
-          <a class="text-white nav-link" href="http://localhost/proy_paradigmas/Views/About.php">About it</a>
+          <a class="text-white nav-link" href="http://localhost/proy_paradigmas/Views/About.php">About It</a>
         </div>
       </div>
     </div>
