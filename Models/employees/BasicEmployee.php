@@ -8,10 +8,12 @@ if (file_exists("Controllers/MySqlDB.php")) {
   include_once "../Controllers/MySqlDB.php";
 }
 
+/**
+ * To do Basic employees, based on employees bases
+ */
 class BasicEmployee extends Employee
 {
 
-  // Atributos clasicos del empleado base...
   private int $employee_id;
   private string $first_name;
   private string $last_name;
@@ -23,8 +25,9 @@ class BasicEmployee extends Employee
   private int $department_id;
   private string $filter;
 
-  // !TODO: hacer todos los metodos getter y setter
-
+  /**
+   * @return a new instance of Basic employee
+   */
   public function __construct()
   {
     if (!isset($this->connection)) {
@@ -32,11 +35,20 @@ class BasicEmployee extends Employee
     }
   }
 
+  /**
+   * Define filter to search employees
+   */
   public function setFilter($filter)
   {
     $this->filter = $filter;
   }
 
+  /**
+   * Define data to represent an employee
+   * @param employee_id 
+   * @param first_name
+   * @param last_name
+   */
   public function setData(
     int $employee_id,
     string $first_name,

@@ -34,9 +34,9 @@ class BasicSpreadsheet extends Spreadsheet
     $this->employee = $employee;
   }
 
-  public function read()
+  public function read($start, $end)
   {
-    return $this->connection->query("SELECT * FROM spreadsheet");
+    return $this->connection->query("SELECT * FROM `spreadsheet` WHERE date BETWEEN " . str_replace('-', '', $start) . " AND " . str_replace('-', '', $end) . " ORDER BY date ASC");
   }
 
   public function getEmployee(int $id)
@@ -65,6 +65,14 @@ class BasicSpreadsheet extends Spreadsheet
       "ex" => $this->extra,
       "da" => $this->date
     ]);
+  }
+
+  public function getExtraValue($id)
+  {
+    return $this->connection->query("SELECT extra
+    FROM employee e
+    INNER JOIN job j
+    ON e.id = $id and e.job = j.id;")->fetch(PDO::FETCH_ASSOC)['extra'];
   }
 
   public function save()

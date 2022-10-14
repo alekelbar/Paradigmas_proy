@@ -51,67 +51,69 @@
         </select>
       </form>
 
-      <table class="table table-responsive table-dark">
-        <thead>
-          <th class="text-center" scope="row">#</th>
-          <th class="text-center" scope="row">First Name</th>
-          <th class="text-center" scope="row">Last Name</th>
-          <th class="text-center" scope="row">Email</th>
-          <th class="text-center" scope="row">Phone Number</th>
-          <th class="text-center" scope="row">Department</th>
-          <th class="text-center" scope="row">Job</th>
-          <th class="text-center" scope="row">Manage</th>
-        </thead>
-        <tbody>
-          <?php
-          if (isset($_GET['action']) == 'delete') {
-            $id = $_GET['data']; // identificador unico del empleado...
+      <div style="overflow-x:auto;" class="w-100 mx-auto">
+        <table class="table table-dark">
+          <thead>
+            <th class=" text-center" scope="row">#</th>
+            <th class="text-center" scope="row">First Name</th>
+            <th class="text-center" scope="row">Last Name</th>
+            <th class="text-center" scope="row">Email</th>
+            <th class="text-center" scope="row">Phone Number</th>
+            <th class="text-center" scope="row">Department</th>
+            <th class="text-center" scope="row">Job</th>
+            <th class="text-center" scope="row">Manage</th>
+          </thead>
+          <tbody>
+            <?php
+            if (isset($_GET['action']) == 'delete') {
+              $id = $_GET['data']; // identificador unico del empleado...
 
-            $employee->identify($id);
-            if (!($employee->delete())) {
-              echo '<div class="alert alert-danger" role="alert">Cannot delete, because it\'s related with a department</div>';
-            } else {
-              echo '<div class="alert alert-success" role="alert">Employee Successfully delete!</div>';
+              $employee->identify($id);
+              if (!($employee->delete())) {
+                echo '<div class="alert alert-danger" role="alert">Cannot delete, because it\'s related with a department</div>';
+              } else {
+                echo '<div class="alert alert-success" role="alert">Employee Successfully delete!</div>';
+              }
             }
-          }
-          $employee->setFilter($filter);
-          $employees = $employee->read();
-          $index = 0;
-          if ($employees->rowCount() != 0) {
-            foreach ($employees as $item) {
+            $employee->setFilter($filter);
+            $employees = $employee->read();
+            $index = 0;
+            if ($employees->rowCount() != 0) {
+              foreach ($employees as $item) {
 
-              // identificar el empleado...
-              $employee->setDepartment($item['dept']);
-              $employee->setJob($item['job']);
-              echo
-              '<tr class="table table-item">' .
-                ' <th class="text-center" scope="row">' . $index + 1 . '</th>' .
-                ' <td class="text-center">' . $item['f_name'] . '</td>' .
-                ' <td class="text-center">' . $item['l_name'] . '</td>' .
-                ' <td class="text-center">' . $item['email'] . '</td>' .
-                ' <td class="text-center">' . $item['phone'] . '</td>' .
-                ' <td class="text-center">' . $employee->getDepartment($item['dept'])['name'] . '</td>' .
-                ' <td class="text-center">' . $employee->getJob($item['job'])['name'] . '</td>' .
-                ' <td class="text-center">' .
-                '
+                // identificar el empleado...
+                $employee->setDepartment($item['dept']);
+                $employee->setJob($item['job']);
+                echo
+                '<tr class="table table-item">' .
+                  ' <th class="text-center" scope="row">' . $index + 1 . '</th>' .
+                  ' <td class="text-center">' . $item['f_name'] . '</td>' .
+                  ' <td class="text-center">' . $item['l_name'] . '</td>' .
+                  ' <td class="text-center">' . $item['email'] . '</td>' .
+                  ' <td class="text-center">' . $item['phone'] . '</td>' .
+                  ' <td class="text-center">' . $employee->getDepartment($item['dept'])['name'] . '</td>' .
+                  ' <td class="text-center">' . $employee->getJob($item['job'])['name'] . '</td>' .
+                  ' <td class="text-center">' .
+                  '
             <a href="Views\edit.php?action=edit&data=' . $item['id'] . '" class="btn btn-success mx-2">
               <i class="fa-solid fa-pen-to-square"></i>
             </a>' .
 
-                '<a href="index.php?action=delete&data=' . $item['id'] . '" class="btn btn-danger">
+                  '<a href="index.php?action=delete&data=' . $item['id'] . '" class="btn btn-danger">
               <i class="fa-solid fa-trash"></i>
             </a>' .
 
-                '</td>' .
-                '</tr>';
-              $index++;
+                  '</td>' .
+                  '</tr>';
+                $index++;
+              }
+            } else {
+              echo '<th scope="row">' . 'No data found' . '</th>';
             }
-          } else {
-            echo '<th scope="row">' . 'No data found' . '</th>';
-          }
-          ?>
-        </tbody>
-      </table>
+            ?>
+          </tbody>
+        </table>
+      </div>
       <?php include_once './Views/footer.php' ?>
 </body>
 

@@ -36,16 +36,48 @@
     }
   }
 
-  $data = $spreadsheet->read();
-
   ?>
-  <div class="vh-100 bg-light vw-100 pt-3 main">
-    <div class="container-md">
+
+  <form method="post" action="" class="form-control">
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <p class="text-center fw-bold form-label my-3">start at?</p>
+          <input required name="Idate1" type="date" class="form-control" id="InputDate" aria-describedby="date">
+        </div>
+        <div class="col">
+          <p class="text-center fw-bold form-label my-3">End at?</p>
+          <input required name="Idate2" type="date" class="form-control" id="InputDate" aria-describedby="date">
+        </div>
+      </div>
+      <div class="row my-3">
+        <div class="col d-flex justify-content-center">
+          <input type="submit" class="btn btn-success w-50">
+        </div>
+      </div>
+    </div>
+
+  </form>
+
+  <?php
+  date_default_timezone_set('America/Managua');
+  $mdate = new DateTime();
+
+  if (isset($_POST['Idate1']))
+    $data = $spreadsheet->read($_POST['Idate1'], $_POST['Idate2']);
+  else
+    $data = $spreadsheet->read('19500101', $mdate->format('Ymd'));
+  ?>
+
+  <div class="container-md">
+
+    <div style="overflow-x:auto;" class="w-100 mx-auto">
 
       <table class="table table-responsive table-dark">
         <thead>
           <th class="text-center" scope="row">#</th>
           <th class="text-center" scope="row">Employee</th>
+          <th class="text-center" scope="row">Basic Salary</th>
           <th class="text-center" scope="row">Grass Salary</th>
           <th class="text-center" scope="row">Net Salary</th>
           <th class="text-center" scope="row">wage reduction</th>
@@ -60,15 +92,21 @@
           $neto = 0;
           $reb_lab = 0;
           $extra = 0;
+          $base = 0;
           foreach ($data as $item) {
+
+            $auxb = $item['sal_bruto'] + ($spreadsheet->getExtraValue($item['employee_id']) * $item['extra']);
+            $auxn = round(TaxCalculator::cal($item['sal_bruto'] + ($spreadsheet->getExtraValue($item['employee_id']) * $item['extra']), 2));
+            $auxr = $auxb - $auxn;
 
             echo
             '<tr class="table table-item">' .
               ' <th class="text-center" scope="row">' . $index . '</th>' .
               ' <td class="text-center fw-bold">' . $spreadsheet->getEmployee($item['employee_id'])['f_name'] . '</td>' .
               ' <td class="text-center">' . $item['sal_bruto'] . ' $' . '</td>' .
-              ' <td class="text-center">' . round(TaxCalculator::cal($item['sal_bruto']), 2) . ' $' . '</td>' .
-              ' <td class="text-center">' . round($item['sal_bruto'] - TaxCalculator::cal($item['sal_bruto']), 2) . ' $' . '</td>' .
+              ' <td class="text-center">' . $auxb . ' $' . '</td>' .
+              ' <td class="text-center">' . $auxn . ' $' . '</td>' .
+              ' <td class="text-center">' . $auxr . ' $' . '</td>' .
               ' <td class="text-center">' . $item['extra'] . '</td>' .
               ' <td class="text-center">' . $item['date'] . '</td>' .
               ' <td class="text-center">' .
@@ -84,9 +122,10 @@
               '</td>' .
               '</tr>';
 
-            $bruto +=  $item['sal_bruto'];
-            $neto += round(TaxCalculator::cal($item['sal_bruto']), 2);
-            $reb_lab += round($item['sal_bruto'] - TaxCalculator::cal($item['sal_bruto']), 2);
+            $bruto +=  $auxb;
+            $base += $item['sal_bruto'];
+            $neto += $auxn;
+            $reb_lab += $auxr;
             $extra += $item['extra'];
             $index++;
           }
@@ -94,6 +133,7 @@
           '<tr class="table table-item">' .
             ' <th class="text-center" scope="row">' . $index . '</th>' .
             ' <td class="text-center fw-bold">' . 'Total: ' . '</td>' .
+            ' <td class="text-center fw-bold">' . $base . ' $' . '</td>' .
             ' <td class="text-center fw-bold">' . $bruto . ' $' . '</td>' .
             ' <td class="text-center fw-bold">' . $neto . ' $' . '</td>' .
             ' <td class="text-center fw-bold">' . $reb_lab . ' $' . '</td>' .
@@ -101,7 +141,8 @@
           ?>
         </tbody>
       </table>
-      <?php include_once 'footer.php' ?>
+    </div>
+    <?php include_once 'footer.php' ?>
 </body>
 
 </html>

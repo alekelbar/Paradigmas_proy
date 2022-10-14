@@ -52,7 +52,7 @@
     <div class="container-md  py-3">
       <form method="post" action="" class="form-control">
 
-        <label for="InputBruto" class="fw-semibold form-label my-3">What's your Gross salary?</label>
+        <label for="InputBruto" class="fw-semibold form-label my-3">What's your basic salary?</label>
         <input required name="Ibruto" min="0" type="number" class="form-control" id="InputBruto" aria-describedby="phone">
         <div id="phone" class="form-text">We need to do some calculus.</div>
 
