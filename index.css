@@ -1,0 +1,19 @@
+:root {
+  /* Color Theme Swatches in Hex */
+  --Theme-1: #10497A;
+  --Theme-2: #6CB8FB;
+  --Theme-3: #2094FA;
+  --Theme-4: #2A547A;
+  --Theme-5: #1A76C7;
+}
+
+.main {
+  color: black;
+}
+
+.table-item:hover {
+  background-color: var(--Theme-1);
+  color: white;
+  transition: 0.5s background-color;
+  cursor: pointer;
+}
