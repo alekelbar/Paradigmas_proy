@@ -17,5 +17,96 @@
   background-color: var(--Theme-1);
   color: white;
   transition: 0.5s background-color;
-  cursor: pointer;
+  cursor: auto;
+}
+
+.table-item {
+  animation: slide-in 2000ms;
+}
+
+.input-field {
+  animation: size-up 1000ms;
+}
+
+.nav {
+  position: sticky !important;
+  top: 0%;
+}
+
+.footer {
+  animation: fade 2000ms;
+}
+
+.image {
+  animation: slide-up 2000ms
+}
+
+.body-card {
+  animation: slide-in 2000ms;
+}
+
+@keyframes fade {
+  from {
+    opacity: 30%;
+  }
+
+  50% {
+    opacity: 50%;
+  }
+
+  70% {
+    opacity: 80%;
+  }
+
+  to {
+    opacity: 100%;
+  }
+}
+
+@keyframes slide-in {
+  from {
+    transform: translateX(-100%);
+  }
+
+  to {
+    transform: translateX(0%);
+  }
+}
+
+@keyframes slide-up {
+  from {
+    opacity: 10%;
+    transform: scale(.1);
+    margin: 0 auto;
+  }
+
+  40% {
+    opacity: 50%;
+    transform: scale(.5);
+    margin: 0 auto;
+  }
+
+  to {
+    opacity: 100%;
+    transform: scale(1);
+    margin: 0 auto;
+  }
+}
+
+
+@keyframes size-up {
+  from {
+    width: 50%;
+    margin: 0 auto;
+  }
+
+  50% {
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  to {
+    width: 100%;
+    margin: 0 auto;
+  }
 }

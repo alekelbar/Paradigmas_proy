@@ -11,7 +11,7 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js" integrity="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk" crossorigin="anonymous"></script>
-  <link rel="stylesheet" href="index.css">
+  <link rel="stylesheet" href="../index.css">
   <script src="https://kit.fontawesome.com/e272832d5f.js" crossorigin="anonymous"></script>
 
 
@@ -49,8 +49,8 @@
 
   ?>
   <div class="bg-light vw-100 pt-3 py-4">
-    <div class="container-md  py-3">
-      <form method="post" action="" class="form-control">
+    <div class="container-md input-field py-3">
+      <form method="post" action="" class="form-control ">
 
         <label for="InputBruto" class="fw-semibold form-label my-3">What's your basic salary?</label>
         <input required name="Ibruto" min="0" type="number" class="form-control" id="InputBruto" aria-describedby="phone">

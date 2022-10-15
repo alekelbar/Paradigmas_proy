@@ -11,7 +11,7 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js" integrity="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk" crossorigin="anonymous"></script>
-  <link rel="stylesheet" href="index.css">
+  <link rel="stylesheet" href="../index.css">
   <script src="https://kit.fontawesome.com/e272832d5f.js" crossorigin="anonymous"></script>
 
 </head>
@@ -74,27 +74,27 @@
       <form method="post" action="" class="form-control">
 
         <label for="InputName" class="fw-semibold form-label my-3">What's your name?</label>
-        <input required value=<?php echo $data['f_name']; ?> name="IName" type="text" class="form-control" id="InputName" aria-describedby="name">
+        <input required value=<?php echo $data['f_name']; ?> name="IName" type="text" class="input-field form-control" id="InputName" aria-describedby="name">
         <div id="name" class="form-text">We need to identified it.</div>
 
         <label for="InputLName" class="fw-semibold form-label my-3">What's your last name?</label>
-        <input required value=<?php echo $data['l_name']; ?> name="Ilname" type="text" class="form-control" id="InputLName" aria-describedby="lastName">
+        <input required value=<?php echo $data['l_name']; ?> name="Ilname" type="text" class="input-field form-control" id="InputLName" aria-describedby="lastName">
         <div id="lastName" class="form-text">We need to identified it.</div>
 
         <label for="InputEmail" class="fw-semibold form-label my-3">What's your Email?</label>
-        <input required value=<?php echo $data['email']; ?> name="Iemail" type="email" class="form-control" id="InputEmail" aria-describedby="email">
+        <input required value=<?php echo $data['email']; ?> name="Iemail" type="email" class="input-field form-control" id="InputEmail" aria-describedby="email">
         <div id="email" class="form-text">We need to contact to you.</div>
 
         <label for="InputPhone" class="fw-semibold form-label my-3">What's your phone number?</label>
-        <input required value=<?php echo $data['phone']; ?> name="Iphone" type="number" min="0" class="form-control" id="InputPhone" aria-describedby="phone">
+        <input required value=<?php echo $data['phone']; ?> name="Iphone" type="number" min="0" class="input-field form-control" id="InputPhone" aria-describedby="phone">
         <div id="phone" class="form-text">We need to contact to you.</div>
 
         <label for="InputDate" class="fw-semibold form-label my-3">What's your hire date?</label>
-        <input required value=<?php echo $data['hire']; ?> name="Idate" type="date" class="form-control" id="InputDate" aria-describedby="date">
+        <input required value=<?php echo $data['hire']; ?> name="Idate" type="date" class="input-field form-control" id="InputDate" aria-describedby="date">
         <div id="date" class="form-text">it's important to now.</div>
 
         <label for="InputJob" class="fw-semibold form-label my-3">What's your Job?</label>
-        <select required id="InputJob" class=" form-select" name="Ijob">
+        <select required id="InputJob" class="input-field  form-select" name="Ijob">
           <?php
           if ($jobs->rowCount() > 0) {
             foreach ($jobs as $job) {
@@ -107,7 +107,7 @@
 
 
         <label for="InputState" class="fw-semibold form-label my-3">What's your state?</label>
-        <select required id="InputState" class=" form-select" name="Istate">
+        <select required id="InputState" class="input-field  form-select" name="Istate">
           <?php
           if ($states->rowCount() > 0) {
             foreach ($states as $state) {
@@ -119,7 +119,7 @@
         <div id="state" class="form-text">What's your job?.</div>
 
         <label for="InputDept" class="fw-semibold form-label my-3">What's your department?</label>
-        <select required id="InputDept" class=" form-select" name="Idept">
+        <select required id="InputDept" class="input-field  form-select" name="Idept">
           <?php
           if ($depts->rowCount() > 0) {
             foreach ($depts as $dept) {
@@ -129,7 +129,7 @@
           ?>
         </select>
         <div id="state" class="form-text">What's your job?.</div>
-        <input type="submit" class="my-3 btn btn-success fs-6" value="Send" />
+        <input type="submit" class="input-field my-3 btn btn-success fs-6" value="Send" />
       </form>
       <?php include_once 'footer.php' ?>
     </div>
