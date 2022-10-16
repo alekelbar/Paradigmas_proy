@@ -9,11 +9,17 @@ include_once "../Controllers/MySqlDB.php";
 
 class BasicState extends State
 {
+  /**
+   * @return a query to read States 
+   */
   public function read()
   {
     return $this->connection?->query("SELECT name, id FROM state");
   }
 
+  /**
+   * @return a new instance of Basic State
+   */
   public function __construct()
   {
     if (!isset($this->connection)) {

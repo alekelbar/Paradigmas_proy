@@ -9,13 +9,18 @@ include_once "../Controllers/MySqlDB.php";
 
 class BasicJob extends Job
 {
+  /**
+   * @return a new instance of Basic job
+   */
   public function __construct()
   {
     if (!isset($this->connection)) {
       $this->connection = MySqlDB::getInstance();
     }
   }
-
+  /**
+   * @return a query to read Jobs 
+   */
   public function read()
   {
     return $this->connection->query("SELECT name, id FROM job");
