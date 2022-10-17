@@ -5,15 +5,15 @@ include_once "db.php";
 
 class MySqlDB extends DB
 {
-/**
- * Database connection string 
- * @param host 
- * @param db
- * @param password
- * @param charset
- * @param connection
- * @param instance
- */
+  /**
+   * Database connection string 
+   * @param host 
+   * @param db
+   * @param password
+   * @param charset
+   * @param connection
+   * @param instance
+   */
   private string $host = "localhost";
   private string $db = "sign_paradigmas";
   private string $user = "root";
@@ -22,9 +22,9 @@ class MySqlDB extends DB
   private static ?PDO $connection = null;
   private static MySqlDB | null $instance = null;
 
- /**
-  * Creative sigleton pattern :construct private
-  */
+  /**
+   * Creative sigleton pattern :construct private
+   */
   private function __construct()
   {
   }
@@ -42,10 +42,10 @@ class MySqlDB extends DB
     }
     return self::$connection;
   }
-/**
- * This function performs the connection section  
- * verifies the connection string is correct and no error occurs. 
- */
+  /**
+   * This function performs the connection section  
+   * verifies the connection string is correct and no error occurs. 
+   */
   protected function connect(): PDO
   {
     try {

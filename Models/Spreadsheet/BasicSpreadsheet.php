@@ -50,25 +50,25 @@ class BasicSpreadsheet extends Spreadsheet
   {
     return $this->connection->query("SELECT * FROM `spreadsheet` WHERE date BETWEEN " . str_replace('-', '', $start) . " AND " . str_replace('-', '', $end) . " ORDER BY date ASC");
   }
-/**
- * The employee of the object used is obtained
- */
+  /**
+   * The employee of the object used is obtained
+   */
   public function getEmployee(int $id)
   {
     return $this->connection->query("SELECT * FROM employee WHERE id = $id")->fetch(PDO::FETCH_ASSOC);
   }
-/**
- * identify the object instance of type Spreadsheet
- * @param id A specific Spreadsheet is obtained 
- */
+  /**
+   * identify the object instance of type Spreadsheet
+   * @param id A specific Spreadsheet is obtained 
+   */
   public function identify(int $id)
   {
     $this->id = $id;
   }
-/**
- * Function capable of deleting data in the database 
- * @return Shows a confirmation message
- */
+  /**
+   * Function capable of deleting data in the database 
+   * @return Shows a confirmation message
+   */
   public function delete()
   {
     $stm = $this->connection->prepare("DELETE FROM spreadsheet WHERE id = :id");
@@ -93,9 +93,9 @@ class BasicSpreadsheet extends Spreadsheet
       "da" => $this->date
     ]);
   }
-/**
- * @return the value of extra
- */
+  /**
+   * @return the value of extra
+   */
   public function getExtraValue($id)
   {
     return $this->connection->query("SELECT extra
@@ -129,9 +129,9 @@ class BasicSpreadsheet extends Spreadsheet
       "da" => $this->date
     ]);
   }
-/**
- * @return the id of the object used 
- */
+  /**
+   * @return the id of the object used 
+   */
   public function getOne($id)
   {
     return $this->connection->query("SELECT * FROM spreadsheet WHERE id = $id")->fetch(PDO::FETCH_ASSOC);

@@ -56,22 +56,22 @@
   ?>
   <div class="bg-light vw-100 pt-3 py-4">
     <div class="container-md  py-3">
-      <form method="post" action="" class="form-control">
+      <form method="post" action="" class="input-field form-control">
 
         <label for="InputBruto" class="fw-semibold form-label my-3">What's your Gross salary?</label>
-        <input required value=<?php echo $data['sal_bruto']; ?> name="Ibruto" min="0" type="number" class="input-field form-control" id="InputBruto" aria-describedby="phone">
+        <input required value=<?php echo $data['sal_bruto']; ?> name="Ibruto" min="0" type="number" class=" form-control" id="InputBruto" aria-describedby="phone">
         <div id="phone" class="form-text">We need to do some calculus.</div>
 
         <label for="InputExtra" class="fw-semibold form-label my-3">How many hours do you have more?</label>
-        <input required value=<?php echo $data['extra']; ?> name="Iextra" min="0" type="number" class="input-field form-control" id="InputExtra" aria-describedby="phone">
+        <input required value=<?php echo $data['extra']; ?> name="Iextra" min="0" type="number" class=" form-control" id="InputExtra" aria-describedby="phone">
         <div id="phone" class="form-text">We need to do some calculus.</div>
 
         <label for="InputDate" class="fw-semibold form-label my-3">What date it's corresponding?</label>
-        <input required value=<?php echo $data['date']; ?> name="Idate" type="date" class="input-field form-control" id="InputDate" aria-describedby="date">
+        <input required value=<?php echo $data['date']; ?> name="Idate" type="date" class=" form-control" id="InputDate" aria-describedby="date">
         <div id="date" class="form-text">it's important to now.</div>
 
         <label for="InputEmployee" class="fw-semibold form-label my-3">Who it's corresponding?</label>
-        <select required id="InputEmployee" class="input-field  form-select" name="Iemployee">
+        <select required id="InputEmployee" class="  form-select" name="Iemployee">
           <?php
           if ($employees->rowCount() > 0) {
             foreach ($employees as $item) {
@@ -80,7 +80,7 @@
           }
           ?>
         </select>
-        <input type="submit" class="input-field my-3 btn btn-success fs-6" value="Send" />
+        <input type="submit" class=" my-3 btn btn-success fs-6" value="Send" />
 
       </form>
       <?php include_once 'footer.php' ?>
