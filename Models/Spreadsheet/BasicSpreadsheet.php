@@ -34,7 +34,7 @@ class BasicSpreadsheet extends Spreadsheet
     float $salarioB,
     int $extra,
     string $date,
-    int $employee,
+    int $employee
   ) {
     $this->id = $id;
     $this->salarioB = $salarioB;

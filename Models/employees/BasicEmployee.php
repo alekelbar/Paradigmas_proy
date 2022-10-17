@@ -64,7 +64,7 @@ class BasicEmployee extends Employee
     string $phone_number,
     string $hire_date,
     int $job_id,
-    int $department_id,
+    int $department_id
   ) {
     $this->employee_id = $employee_id;
     $this->first_name = $first_name;
@@ -77,73 +77,73 @@ class BasicEmployee extends Employee
     $this->department_id = $department_id;
   }
 
-/**
- * identify the object instance of type employee
- * @param id A specific employee is obtained 
- */
+  /**
+   * identify the object instance of type employee
+   * @param id A specific employee is obtained 
+   */
   public function identify(int $id)
   {
     $this->employee_id = $id;
   }
-/**
- * The purpose of the department is established
- * @param id A specific department is established
- */
+  /**
+   * The purpose of the department is established
+   * @param id A specific department is established
+   */
   public function setDepartment(int $id)
   {
     $this->department_id = $id;
   }
-/**
- * The object of the work is established
- * @param id A specific work is established
- */
+  /**
+   * The object of the work is established
+   * @param id A specific work is established
+   */
   public function setJob(int $id)
   {
     $this->job_id = $id;
   }
-/**
- * It is established to the object with the different types of state, contracting
- * @param id A specific contracting status is established for labor
- */
+  /**
+   * It is established to the object with the different types of state, contracting
+   * @param id A specific contracting status is established for labor
+   */
   public function setState(int $id)
   {
     $this->state = $id;
   }
- /**
-  * Object status is obtained
-  */
+  /**
+   * Object status is obtained
+   */
   public function getState()
   {
     $state_query = $this->connection->query('SELECT e.name FROM state e where e.id = ' . $this->state);
     return $state_query->fetch(PDO::FETCH_ASSOC);
   }
-/**
- * The department of the object used is obtained
- */
+  /**
+   * The department of the object used is obtained
+   */
   public function getDepartment()
   {
     $department = $this->connection->query('SELECT d.name FROM department d where id = ' . $this->department_id);
     return $department->fetch(PDO::FETCH_ASSOC);
   }
-/**
- * The job is obtained from the object type employee
- */
+  /**
+   * The job is obtained from the object type employee
+   */
   public function getJob()
   {
     $job = $this->connection->query('SELECT j.name FROM job j WHERE j.id = ' . $this->job_id);
     return $job->fetch(PDO::FETCH_ASSOC);
   }
-/**
- * Function capable of Saving data to the database 
- * @param f_name
- * @param l_name
- * @param email
- * @param phone
- * @param hire
- * @param job
- * @param dept
- * @param state
- */
+  /**
+   * Function capable of Saving data to the database 
+   * @param f_name
+   * @param l_name
+   * @param email
+   * @param phone
+   * @param hire
+   * @param job
+   * @param dept
+   * @param state
+   */
   public function save()
   {
     $prepareStm = $this->connection->prepare("INSERT INTO employee (f_name, l_name, email, phone, hire, job, dept, state) VALUES (:name , :lname , :email , :phone , :hire , :job , :dept , :sta )");
@@ -173,17 +173,17 @@ class BasicEmployee extends Employee
     return $this->connection->query('SELECT * FROM employee WHERE state = ' . $this->filter);
   }
 
-/**
- * @return the id of the object used 
- */
+  /**
+   * @return the id of the object used 
+   */
   public function getOne(): PDOStatement
   {
     return $this->connection->query("SELECT * FROM employee WHERE id = " . $this->employee_id);
   }
-/**
- * Function capable of deleting data in the database 
- * @return Shows a confirmation message
- */
+  /**
+   * Function capable of deleting data in the database 
+   * @return Shows a confirmation message
+   */
   public function delete()
   {
     try {
@@ -195,19 +195,19 @@ class BasicEmployee extends Employee
       return false;
     }
   }
-/**
- * Function capable of updating the data of the employee type objects
- * @param id
- * @param fn
- * @param ln
- * @param email
- * @param pn
- * @param hd
- * @param jid
- * @param did
- * @param st 
- * @return Shows a confirmation message
- */
+  /**
+   * Function capable of updating the data of the employee type objects
+   * @param id
+   * @param fn
+   * @param ln
+   * @param email
+   * @param pn
+   * @param hd
+   * @param jid
+   * @param did
+   * @param st 
+   * @return Shows a confirmation message
+   */
   public function update()
   {
     $prepareStm = $this->connection->prepare('UPDATE employee SET id = :id, f_name = :fn, 

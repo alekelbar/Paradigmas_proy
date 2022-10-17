@@ -20,7 +20,7 @@ class MySqlDB extends DB
   private string $password = "";
   private string $charset = "utf8mb4";
   private static ?PDO $connection = null;
-  private static MySqlDB | null $instance = null;
+  private static ?MySqlDB $instance = null;
 
   /**
    * Creative sigleton pattern :construct private
