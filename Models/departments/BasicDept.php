@@ -16,10 +16,10 @@ class BasicDept extends Department
       $this->connection = MySqlDB::getInstance();
     }
   }
-/**
- * sets the department object name
- * @param department_name
- */
+  /**
+   * sets the department object name
+   * @param department_name
+   */
   public function setName($deparment_name)
   {
     $this->deparment_name = $deparment_name;

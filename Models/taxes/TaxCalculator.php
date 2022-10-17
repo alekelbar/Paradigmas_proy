@@ -1,4 +1,5 @@
 <?php
+
 /**
  * @return the creation of a new salary with taxes
  */
