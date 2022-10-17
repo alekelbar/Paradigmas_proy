@@ -7,6 +7,6 @@ declare(strict_types=1);
  */
 abstract class Department
 {
-  protected PDO | null $connection = null;
+  protected ?PDO $connection = null;
   public abstract function read();
 }

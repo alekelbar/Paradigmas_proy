@@ -14,7 +14,7 @@ class BasicState extends State
    */
   public function read()
   {
-    return $this->connection?->query("SELECT name, id FROM state");
+    return $this->connection->query("SELECT name, id FROM state");
   }
 
   /**
