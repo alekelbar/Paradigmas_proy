@@ -8,11 +8,13 @@ include_once "Spreadsheet.php";
 include_once "BasicSpreadsheet.php";
 
 /**
- * @return the creation of a new Spreadsheet type object 
+ * Class to create concrete objects of the Spreadsheet of class.
  */
-
 class BasicSpreadsheetFactory extends SpreadsheetFactory
 {
+/**
+ * @return the creation of a new Spreadsheet type object 
+ */
   public function createSpreadsheet(): BasicSpreadsheet
   {
     return new BasicSpreadsheet();

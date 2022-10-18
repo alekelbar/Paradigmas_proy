@@ -2,11 +2,16 @@
 
 declare(strict_types=1);
 /**
- * An abstract class to make Jobs.
- * it's define four basic methods [read];
+ * An abstract class to make Jobs
  */
 abstract class Job
 {
-  protected ?PDO $connection = null;
+  /**
+   * connection to the database for the job class.
+   */
+  protected PDO | null $connection = null;
+  /**
+   * A basic method to read.
+   */
   public abstract function read();
 }

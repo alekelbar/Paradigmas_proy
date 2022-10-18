@@ -5,11 +5,14 @@ include_once "JobFactory.php";
 include_once "BasicJob.php";
 
 /**
- * @return the creation of a new Job type object 
+ *  A class to create concrete job objects.
  */
 
 class BasicJobFactory extends JobFactory
 {
+  /**
+   * @return a new basic Job.
+   */
   public function createJob(): Job
   {
     return new BasicJob();

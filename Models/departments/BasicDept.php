@@ -9,7 +9,13 @@ include_once "../Controllers/MySqlDB.php";
  */
 class BasicDept extends Department
 {
+  /**
+   * department name 
+   */
   public string $deparment_name;
+  /**
+   * constructor method of the department class
+   */
   public function __construct()
   {
     if (!isset($this->connection)) {
@@ -26,6 +32,7 @@ class BasicDept extends Department
   }
   /**
    * query to read apartments 
+   * @return name and id of the department
    */
   public function read()
   {

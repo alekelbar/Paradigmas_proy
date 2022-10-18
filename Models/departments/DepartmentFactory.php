@@ -3,10 +3,13 @@
 declare(strict_types=1);
 include_once "Department.php";
 /**
- * An abstract class for creating departments for an employee.
+ * abstract class factory department 
  */
 
 abstract class DepartmentFactory
 {
+  /**
+  * An abstract method for creating departments for an departament.
+  */
   protected abstract function createDepartment(): Department;
 }

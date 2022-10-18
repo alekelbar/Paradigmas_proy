@@ -2,11 +2,16 @@
 
 declare(strict_types=1);
 /**
- * An abstract class to obtain the Department.
- * A basic read method is defined
+ * Department abstract class.
  */
 abstract class Department
 {
-  protected ?PDO $connection = null;
+  /**
+  * connection to the database for the department class
+  */
+  protected PDO | null $connection = null;
+  /**
+  * A basic read method is defined
+  */
   public abstract function read();
 }

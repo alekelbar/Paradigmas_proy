@@ -7,5 +7,8 @@ include_once "State.php";
  */
 abstract class StateFactory
 {
+  /**
+   * This is an abstract function for creating a state.
+   */
   protected abstract function createStatus(): State;
 }
