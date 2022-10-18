@@ -1,20 +1,7 @@
+## Sistema de gestión de empleados sencillo con PHP
+> Unícamente construido por terminos academicos.
 
-<code>
-<?php
-  include_once "./Model/BasicEmployeeFactory.php";
+Para la instalación del mismo basta con la instalación de [XAMP](https://www.apachefriends.org/) y colocar los archivos del proyecto en los archivos servidor por apache.
 
-  $factory = new BasicEmployeeFactory();
-  $employee = $factory->createEmployee();
 
-  // $employee->setData(5, 'Miguel', 'Hernandez', 'testing@gmail.com', 1, '88888888', date('YYYY:MM:DD'), 1, 1);
-  // $employee->save();
-
-  // $employee->identify(5);
-  // $employee->delete();
-
-  $employees = $employee->read();
-  foreach ($employees as $item) {
-    echo "<div>" . $item['first_name'] . "</div>";
-  }
-  ?>
-</code>
+Asegure de crear la base de datos adecuada(informació de conexión dentro de la clase MySqlDB), e implemente las tablas que provee este mismo proyecto.
