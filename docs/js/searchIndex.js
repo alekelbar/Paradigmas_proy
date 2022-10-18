@@ -68,22 +68,22 @@ Search.appendIndex(
         },                {
             "fqsen": "\\BasicDepartmentFactory",
             "name": "BasicDepartmentFactory",
-            "summary": "An\u0020abstract\u0020class\u0020for\u0020creating\u0020departments\u0020for\u0020an\u0020employee.",
+            "summary": "class\u0020to\u0020create\u0020concrete\u0020objects\u0020of\u0020the\u0020class\u0020department",
             "url": "classes/BasicDepartmentFactory.html"
         },                {
             "fqsen": "\\BasicDepartmentFactory\u003A\u003AcreateDepartment\u0028\u0029",
             "name": "createDepartment",
-            "summary": "",
+            "summary": "An\u0020abstract\u0020method\u0020for\u0020creating\u0020departments\u0020for\u0020an\u0020departament.",
             "url": "classes/BasicDepartmentFactory.html#method_createDepartment"
         },                {
             "fqsen": "\\BasicDept",
             "name": "BasicDept",
-            "summary": "An\u0020abstract\u0020class\u0020to\u0020obtain\u0020the\u0020Department.",
+            "summary": "Department\u0020abstract\u0020class.",
             "url": "classes/BasicDept.html"
         },                {
             "fqsen": "\\BasicDept\u003A\u003A__construct\u0028\u0029",
             "name": "__construct",
-            "summary": "",
+            "summary": "constructor\u0020method\u0020of\u0020the\u0020department\u0020class",
             "url": "classes/BasicDept.html#method___construct"
         },                {
             "fqsen": "\\BasicDept\u003A\u003AsetName\u0028\u0029",
@@ -98,37 +98,37 @@ Search.appendIndex(
         },                {
             "fqsen": "\\BasicDept\u003A\u003A\u0024deparment_name",
             "name": "deparment_name",
-            "summary": "",
+            "summary": "department\u0020name",
             "url": "classes/BasicDept.html#property_deparment_name"
         },                {
             "fqsen": "\\Department",
             "name": "Department",
-            "summary": "An\u0020abstract\u0020class\u0020to\u0020obtain\u0020the\u0020Department.",
+            "summary": "Department\u0020abstract\u0020class.",
             "url": "classes/Department.html"
         },                {
             "fqsen": "\\Department\u003A\u003Aread\u0028\u0029",
             "name": "read",
-            "summary": "",
+            "summary": "A\u0020basic\u0020read\u0020method\u0020is\u0020defined",
             "url": "classes/Department.html#method_read"
         },                {
             "fqsen": "\\Department\u003A\u003A\u0024connection",
             "name": "connection",
-            "summary": "",
+            "summary": "connection\u0020to\u0020the\u0020database\u0020for\u0020the\u0020department\u0020class",
             "url": "classes/Department.html#property_connection"
         },                {
             "fqsen": "\\DepartmentFactory",
             "name": "DepartmentFactory",
-            "summary": "An\u0020abstract\u0020class\u0020for\u0020creating\u0020departments\u0020for\u0020an\u0020employee.",
+            "summary": "abstract\u0020class\u0020factory\u0020department",
             "url": "classes/DepartmentFactory.html"
         },                {
             "fqsen": "\\DepartmentFactory\u003A\u003AcreateDepartment\u0028\u0029",
             "name": "createDepartment",
-            "summary": "",
+            "summary": "An\u0020abstract\u0020method\u0020for\u0020creating\u0020departments\u0020for\u0020an\u0020departament.",
             "url": "classes/DepartmentFactory.html#method_createDepartment"
         },                {
             "fqsen": "\\BasicEmployee",
             "name": "BasicEmployee",
-            "summary": "To\u0020do\u0020Basic\u0020employees,\u0020based\u0020on\u0020employees\u0020bases",
+            "summary": "To\u0020do\u0020Basic\u0020employees,\u0020based\u0020on\u0020employees\u0020bases.",
             "url": "classes/BasicEmployee.html"
         },                {
             "fqsen": "\\BasicEmployee\u003A\u003A__construct\u0028\u0029",
@@ -138,57 +138,57 @@ Search.appendIndex(
         },                {
             "fqsen": "\\BasicEmployee\u003A\u003AsetFilter\u0028\u0029",
             "name": "setFilter",
-            "summary": "Define\u0020filter\u0020to\u0020search\u0020employees",
+            "summary": "Define\u0020filter\u0020to\u0020search\u0020employees.",
             "url": "classes/BasicEmployee.html#method_setFilter"
         },                {
             "fqsen": "\\BasicEmployee\u003A\u003AsetData\u0028\u0029",
             "name": "setData",
-            "summary": "Define\u0020data\u0020to\u0020represent\u0020an\u0020employee",
+            "summary": "Define\u0020data\u0020to\u0020represent\u0020an\u0020employee.",
             "url": "classes/BasicEmployee.html#method_setData"
         },                {
             "fqsen": "\\BasicEmployee\u003A\u003Aidentify\u0028\u0029",
             "name": "identify",
-            "summary": "identify\u0020the\u0020object\u0020instance\u0020of\u0020type\u0020employee",
+            "summary": "identify\u0020the\u0020object\u0020instance\u0020of\u0020type\u0020employee.",
             "url": "classes/BasicEmployee.html#method_identify"
         },                {
             "fqsen": "\\BasicEmployee\u003A\u003AsetDepartment\u0028\u0029",
             "name": "setDepartment",
-            "summary": "The\u0020purpose\u0020of\u0020the\u0020department\u0020is\u0020established",
+            "summary": "The\u0020purpose\u0020of\u0020the\u0020department\u0020is\u0020established.",
             "url": "classes/BasicEmployee.html#method_setDepartment"
         },                {
             "fqsen": "\\BasicEmployee\u003A\u003AsetJob\u0028\u0029",
             "name": "setJob",
-            "summary": "The\u0020object\u0020of\u0020the\u0020work\u0020is\u0020established",
+            "summary": "The\u0020object\u0020of\u0020the\u0020work\u0020is\u0020established.",
             "url": "classes/BasicEmployee.html#method_setJob"
         },                {
             "fqsen": "\\BasicEmployee\u003A\u003AsetState\u0028\u0029",
             "name": "setState",
-            "summary": "It\u0020is\u0020established\u0020to\u0020the\u0020object\u0020with\u0020the\u0020different\u0020types\u0020of\u0020state,\u0020contracting",
+            "summary": "It\u0020is\u0020established\u0020to\u0020the\u0020object\u0020with\u0020the\u0020different\u0020types\u0020of\u0020state,\u0020contracting.",
             "url": "classes/BasicEmployee.html#method_setState"
         },                {
             "fqsen": "\\BasicEmployee\u003A\u003AgetState\u0028\u0029",
             "name": "getState",
-            "summary": "Object\u0020status\u0020is\u0020obtained",
+            "summary": "Object\u0020status\u0020is\u0020obtained.",
             "url": "classes/BasicEmployee.html#method_getState"
         },                {
             "fqsen": "\\BasicEmployee\u003A\u003AgetDepartment\u0028\u0029",
             "name": "getDepartment",
-            "summary": "The\u0020department\u0020of\u0020the\u0020object\u0020used\u0020is\u0020obtained",
+            "summary": "The\u0020department\u0020of\u0020the\u0020object\u0020used\u0020is\u0020obtained.",
             "url": "classes/BasicEmployee.html#method_getDepartment"
         },                {
             "fqsen": "\\BasicEmployee\u003A\u003AgetJob\u0028\u0029",
             "name": "getJob",
-            "summary": "The\u0020job\u0020is\u0020obtained\u0020from\u0020the\u0020object\u0020type\u0020employee",
+            "summary": "The\u0020job\u0020is\u0020obtained\u0020from\u0020the\u0020object\u0020type\u0020employee.",
             "url": "classes/BasicEmployee.html#method_getJob"
         },                {
             "fqsen": "\\BasicEmployee\u003A\u003Asave\u0028\u0029",
             "name": "save",
-            "summary": "Function\u0020capable\u0020of\u0020Saving\u0020data\u0020to\u0020the\u0020database",
+            "summary": "Function\u0020of\u0020saving\u0020data\u0020in\u0020the\u0020database.",
             "url": "classes/BasicEmployee.html#method_save"
         },                {
             "fqsen": "\\BasicEmployee\u003A\u003Aread\u0028\u0029",
             "name": "read",
-            "summary": "Function\u0020capable\u0020of\u0020reading\u0020data\u0020into\u0020the\u0020database",
+            "summary": "Function\u0020capable\u0020of\u0020reading\u0020data\u0020into\u0020the\u0020database\u0020.",
             "url": "classes/BasicEmployee.html#method_read"
         },                {
             "fqsen": "\\BasicEmployee\u003A\u003AgetOne\u0028\u0029",
@@ -198,12 +198,12 @@ Search.appendIndex(
         },                {
             "fqsen": "\\BasicEmployee\u003A\u003Adelete\u0028\u0029",
             "name": "delete",
-            "summary": "Function\u0020capable\u0020of\u0020deleting\u0020data\u0020in\u0020the\u0020database",
+            "summary": "Function\u0020capable\u0020of\u0020deleting\u0020data\u0020in\u0020the\u0020database.",
             "url": "classes/BasicEmployee.html#method_delete"
         },                {
             "fqsen": "\\BasicEmployee\u003A\u003Aupdate\u0028\u0029",
             "name": "update",
-            "summary": "Function\u0020capable\u0020of\u0020updating\u0020the\u0020data\u0020of\u0020the\u0020employee\u0020type\u0020objects",
+            "summary": "Function\u0020of\u0020updating\u0020the\u0020data\u0020of\u0020the\u0020employee\u0020type\u0020objects.",
             "url": "classes/BasicEmployee.html#method_update"
         },                {
             "fqsen": "\\BasicEmployee\u003A\u003A\u0024employee_id",
@@ -258,57 +258,57 @@ Search.appendIndex(
         },                {
             "fqsen": "\\BasicEmployeeFactory",
             "name": "BasicEmployeeFactory",
-            "summary": "An\u0020abstract\u0020class\u0020to\u0020create\u0020epmloyees.",
+            "summary": "To\u0020create\u0020concrete\u0020objects\u0020of\u0020the\u0020employee\u0020of\u0020class.",
             "url": "classes/BasicEmployeeFactory.html"
         },                {
             "fqsen": "\\BasicEmployeeFactory\u003A\u003AcreateEmployee\u0028\u0029",
             "name": "createEmployee",
-            "summary": "",
+            "summary": "An\u0020abstract\u0020method\u0020for\u0020creating\u0020employee\u0020for\u0020an\u0020Employee.",
             "url": "classes/BasicEmployeeFactory.html#method_createEmployee"
         },                {
             "fqsen": "\\Employee",
             "name": "Employee",
-            "summary": "An\u0020abstract\u0020class\u0020to\u0020make\u0020epmloyees.",
+            "summary": "abstract\u0020class\u0020to\u0020make\u0020epmloyees",
             "url": "classes/Employee.html"
         },                {
             "fqsen": "\\Employee\u003A\u003Asave\u0028\u0029",
             "name": "save",
-            "summary": "",
+            "summary": "it\u0027s\u0020define\u0020\u0020basic\u0020method\u0020save.",
             "url": "classes/Employee.html#method_save"
         },                {
             "fqsen": "\\Employee\u003A\u003Aread\u0028\u0029",
             "name": "read",
-            "summary": "",
+            "summary": "it\u0027s\u0020define\u0020\u0020basic\u0020method\u0020read.",
             "url": "classes/Employee.html#method_read"
         },                {
             "fqsen": "\\Employee\u003A\u003Adelete\u0028\u0029",
             "name": "delete",
-            "summary": "",
+            "summary": "it\u0027s\u0020define\u0020basic\u0020method\u0020\u0020delete.",
             "url": "classes/Employee.html#method_delete"
         },                {
             "fqsen": "\\Employee\u003A\u003Aupdate\u0028\u0029",
             "name": "update",
-            "summary": "",
+            "summary": "it\u0027s\u0020define\u0020\u0020basic\u0020method\u0020update.",
             "url": "classes/Employee.html#method_update"
         },                {
             "fqsen": "\\Employee\u003A\u003A\u0024connection",
             "name": "connection",
-            "summary": "",
+            "summary": "connection\u0020to\u0020the\u0020database\u0020for\u0020the\u0020employee\u0020class.",
             "url": "classes/Employee.html#property_connection"
         },                {
             "fqsen": "\\EmployeeFactory",
             "name": "EmployeeFactory",
-            "summary": "An\u0020abstract\u0020class\u0020to\u0020create\u0020epmloyees.",
+            "summary": "Abstract\u0020class\u0020to\u0020create\u0020employees.",
             "url": "classes/EmployeeFactory.html"
         },                {
             "fqsen": "\\EmployeeFactory\u003A\u003AcreateEmployee\u0028\u0029",
             "name": "createEmployee",
-            "summary": "",
+            "summary": "An\u0020abstract\u0020method\u0020for\u0020creating\u0020employee\u0020for\u0020an\u0020Employee.",
             "url": "classes/EmployeeFactory.html#method_createEmployee"
         },                {
             "fqsen": "\\BasicJob",
             "name": "BasicJob",
-            "summary": "To\u0020do\u0020Basic\u0020Jobs,\u0020based\u0020on\u0020Job\u0020bases",
+            "summary": "To\u0020do\u0020Basic\u0020Jobs,\u0020based\u0020on\u0020Job\u0020bases.",
             "url": "classes/BasicJob.html"
         },                {
             "fqsen": "\\BasicJob\u003A\u003A__construct\u0028\u0029",
@@ -318,47 +318,47 @@ Search.appendIndex(
         },                {
             "fqsen": "\\BasicJob\u003A\u003Aread\u0028\u0029",
             "name": "read",
-            "summary": "",
+            "summary": "Function\u0020capable\u0020of\u0020reading\u0020data\u0020into\u0020the\u0020database.",
             "url": "classes/BasicJob.html#method_read"
         },                {
             "fqsen": "\\BasicJobFactory",
             "name": "BasicJobFactory",
-            "summary": "An\u0020abstract\u0020class\u0020to\u0020create\u0020Jobs.",
+            "summary": "A\u0020class\u0020to\u0020create\u0020concrete\u0020job\u0020objects.",
             "url": "classes/BasicJobFactory.html"
         },                {
             "fqsen": "\\BasicJobFactory\u003A\u003AcreateJob\u0028\u0029",
             "name": "createJob",
-            "summary": "",
+            "summary": "It\u0020is\u0020an\u0020abstract\u0020function\u0020for\u0020creating\u0020a\u0020job",
             "url": "classes/BasicJobFactory.html#method_createJob"
         },                {
             "fqsen": "\\Job",
             "name": "Job",
-            "summary": "An\u0020abstract\u0020class\u0020to\u0020make\u0020Jobs.",
+            "summary": "An\u0020abstract\u0020class\u0020to\u0020make\u0020Jobs",
             "url": "classes/Job.html"
         },                {
             "fqsen": "\\Job\u003A\u003Aread\u0028\u0029",
             "name": "read",
-            "summary": "",
+            "summary": "A\u0020basic\u0020method\u0020to\u0020read.",
             "url": "classes/Job.html#method_read"
         },                {
             "fqsen": "\\Job\u003A\u003A\u0024connection",
             "name": "connection",
-            "summary": "",
+            "summary": "connection\u0020to\u0020the\u0020database\u0020for\u0020the\u0020job\u0020class.",
             "url": "classes/Job.html#property_connection"
         },                {
             "fqsen": "\\JobFactory",
             "name": "JobFactory",
-            "summary": "An\u0020abstract\u0020class\u0020to\u0020create\u0020Jobs.",
+            "summary": "An\u0020abstract\u0020class\u0020to\u0020create\u0020jobs.",
             "url": "classes/JobFactory.html"
         },                {
             "fqsen": "\\JobFactory\u003A\u003AcreateJob\u0028\u0029",
             "name": "createJob",
-            "summary": "",
+            "summary": "It\u0020is\u0020an\u0020abstract\u0020function\u0020for\u0020creating\u0020a\u0020job",
             "url": "classes/JobFactory.html#method_createJob"
         },                {
             "fqsen": "\\BasicSpreadsheet",
             "name": "BasicSpreadsheet",
-            "summary": "To\u0020do\u0020Basic\u0020Spreadsheet,\u0020based\u0020on\u0020Spreadsheet\u0020bases",
+            "summary": "To\u0020do\u0020Basic\u0020Spreadsheet,\u0020based\u0020on\u0020Spreadsheet\u0020bases.",
             "url": "classes/BasicSpreadsheet.html"
         },                {
             "fqsen": "\\BasicSpreadsheet\u003A\u003A__construct\u0028\u0029",
@@ -398,7 +398,7 @@ Search.appendIndex(
         },                {
             "fqsen": "\\BasicSpreadsheet\u003A\u003AgetExtraValue\u0028\u0029",
             "name": "getExtraValue",
-            "summary": "",
+            "summary": "A\u0020function\u0020that\u0020selects\u0020the\u0020extra\u0020value\u0020using\u0020the\u0020employee\u0020and\u0020job\u0020tables",
             "url": "classes/BasicSpreadsheet.html#method_getExtraValue"
         },                {
             "fqsen": "\\BasicSpreadsheet\u003A\u003Asave\u0028\u0029",
@@ -438,62 +438,62 @@ Search.appendIndex(
         },                {
             "fqsen": "\\BasicSpreadsheetFactory",
             "name": "BasicSpreadsheetFactory",
-            "summary": "An\u0020abstract\u0020class\u0020to\u0020create\u0020Spreadsheets.",
+            "summary": "Class\u0020to\u0020create\u0020concrete\u0020objects\u0020of\u0020the\u0020Spreadsheet\u0020of\u0020class.",
             "url": "classes/BasicSpreadsheetFactory.html"
         },                {
             "fqsen": "\\BasicSpreadsheetFactory\u003A\u003AcreateSpreadsheet\u0028\u0029",
             "name": "createSpreadsheet",
-            "summary": "",
+            "summary": "Abstract\u0020function\u0020for\u0020creating\u0020a\u0020job.",
             "url": "classes/BasicSpreadsheetFactory.html#method_createSpreadsheet"
         },                {
             "fqsen": "\\Spreadsheet",
             "name": "Spreadsheet",
-            "summary": "",
+            "summary": "An\u0020abstract\u0020class\u0020to\u0020make\u0020Jobs.",
             "url": "classes/Spreadsheet.html"
         },                {
             "fqsen": "\\Spreadsheet\u003A\u003Asave\u0028\u0029",
             "name": "save",
-            "summary": "",
+            "summary": "A\u0020basic\u0020method\u0020save",
             "url": "classes/Spreadsheet.html#method_save"
         },                {
             "fqsen": "\\Spreadsheet\u003A\u003Aread\u0028\u0029",
             "name": "read",
-            "summary": "",
+            "summary": "It\u0020is\u0020a\u0020function\u0020to\u0020read",
             "url": "classes/Spreadsheet.html#method_read"
         },                {
             "fqsen": "\\Spreadsheet\u003A\u003Adelete\u0028\u0029",
             "name": "delete",
-            "summary": "",
+            "summary": "It\u0020is\u0020a\u0020basic\u0020method\u0020to\u0020delete",
             "url": "classes/Spreadsheet.html#method_delete"
         },                {
             "fqsen": "\\Spreadsheet\u003A\u003Aupdate\u0028\u0029",
             "name": "update",
-            "summary": "",
+            "summary": "This\u0020define\u0020a\u0020basic\u0020method\u0020to\u0020update",
             "url": "classes/Spreadsheet.html#method_update"
         },                {
             "fqsen": "\\Spreadsheet\u003A\u003A\u0024connection",
             "name": "connection",
-            "summary": "",
+            "summary": "connection\u0020to\u0020the\u0020database\u0020for\u0020the\u0020Spreadsheet\u0020class",
             "url": "classes/Spreadsheet.html#property_connection"
         },                {
             "fqsen": "\\SpreadsheetFactory",
             "name": "SpreadsheetFactory",
-            "summary": "An\u0020abstract\u0020class\u0020to\u0020create\u0020Spreadsheets.",
+            "summary": "This\u0020abstract\u0020class\u0020is\u0020used\u0020to\u0020create\u0020Spreadsheets.",
             "url": "classes/SpreadsheetFactory.html"
         },                {
             "fqsen": "\\SpreadsheetFactory\u003A\u003AcreateSpreadsheet\u0028\u0029",
             "name": "createSpreadsheet",
-            "summary": "",
+            "summary": "Abstract\u0020function\u0020for\u0020creating\u0020a\u0020job.",
             "url": "classes/SpreadsheetFactory.html#method_createSpreadsheet"
         },                {
             "fqsen": "\\BasicState",
             "name": "BasicState",
-            "summary": "To\u0020do\u0020Basic\u0020States,\u0020based\u0020on\u0020State\u0020bases",
+            "summary": "To\u0020do\u0020Basic\u0020States,\u0020based\u0020on\u0020State\u0020bases.",
             "url": "classes/BasicState.html"
         },                {
             "fqsen": "\\BasicState\u003A\u003Aread\u0028\u0029",
             "name": "read",
-            "summary": "",
+            "summary": "Function\u0020capable\u0020of\u0020reading\u0020data\u0020into\u0020the\u0020database",
             "url": "classes/BasicState.html#method_read"
         },                {
             "fqsen": "\\BasicState\u003A\u003A__construct\u0028\u0029",
@@ -503,12 +503,12 @@ Search.appendIndex(
         },                {
             "fqsen": "\\BasicStateFactory",
             "name": "BasicStateFactory",
-            "summary": "An\u0020abstract\u0020class\u0020to\u0020create\u0020States.",
+            "summary": "It\u0020is\u0020a\u0020class\u0020to\u0020create\u0020concrete\u0020state\u0020objects.",
             "url": "classes/BasicStateFactory.html"
         },                {
             "fqsen": "\\BasicStateFactory\u003A\u003AcreateStatus\u0028\u0029",
             "name": "createStatus",
-            "summary": "",
+            "summary": "This\u0020is\u0020an\u0020abstract\u0020function\u0020for\u0020creating\u0020a\u0020state.",
             "url": "classes/BasicStateFactory.html#method_createStatus"
         },                {
             "fqsen": "\\State",
@@ -518,12 +518,12 @@ Search.appendIndex(
         },                {
             "fqsen": "\\State\u003A\u003Aread\u0028\u0029",
             "name": "read",
-            "summary": "",
+            "summary": "An\u0020abstract\u0020class\u0020to\u0020define\u0020basic\u0020method\u0020to\u0020read",
             "url": "classes/State.html#method_read"
         },                {
             "fqsen": "\\State\u003A\u003A\u0024connection",
             "name": "connection",
-            "summary": "",
+            "summary": "It\u0020is\u0020a\u0020connection\u0020to\u0020the\u0020database\u0020for\u0020the\u0020State\u0020class.",
             "url": "classes/State.html#property_connection"
         },                {
             "fqsen": "\\StateFactory",
@@ -533,12 +533,12 @@ Search.appendIndex(
         },                {
             "fqsen": "\\StateFactory\u003A\u003AcreateStatus\u0028\u0029",
             "name": "createStatus",
-            "summary": "",
+            "summary": "This\u0020is\u0020an\u0020abstract\u0020function\u0020for\u0020creating\u0020a\u0020state.",
             "url": "classes/StateFactory.html#method_createStatus"
         },                {
             "fqsen": "\\TaxCalculator",
             "name": "TaxCalculator",
-            "summary": "",
+            "summary": "class\u0020to\u0020assign\u0020taxes\u0020to\u0020employees.",
             "url": "classes/TaxCalculator.html"
         },                {
             "fqsen": "\\TaxCalculator\u003A\u003Acal\u0028\u0029",
@@ -548,7 +548,7 @@ Search.appendIndex(
         },                {
             "fqsen": "\\TaxCalculator\u003A\u003A\u0024taxes",
             "name": "taxes",
-            "summary": "",
+            "summary": "taxes\u0020is\u0020an\u0020arrangement\u0020that\u0020contains\u0020all\u0020the\u0020different\u0020taxes\u0020that\u0020must\u0020be\u0020deducted\u0020from\u0020the\u0020employee\u0027s\u0020salary.",
             "url": "classes/TaxCalculator.html#property_taxes"
         },                {
             "fqsen": "\\",
